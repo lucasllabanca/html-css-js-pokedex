@@ -13,9 +13,11 @@ async function createPokemon(pokemonNumber) {
     const img = document.createElement('img')
     const span = document.createElement('span')
     div.className = `card ${pokemon.types[0].type.name}`
+    div.setAttribute("onclick",`abrirStripes(${pokemonNumber});`);
     h2.innerText = `#${pokemon.order}`
     img.src = pokemon.sprites.front_default
     img.alt = pokemon.name
+    img.title = pokemon.name
     footer.className = pokemon.types[0].type.name
     span.innerText = pokemon.name
     header.appendChild(h2)
@@ -32,6 +34,10 @@ async function getPokemons() {
     for (let pokemonNumber of pokemonNumbers) {
         pokedex.appendChild(await createPokemon(pokemonNumber))
     }
+}
+
+function abrirStripes(pokemonNumber) {
+    window.location.href = `pokemon.html?id=${pokemonNumber}`;
 }
 
 getPokemons()
