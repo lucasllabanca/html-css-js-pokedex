@@ -4,38 +4,50 @@
     box-sizing: border-box;
 }
 
+.pokedex {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .card {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     width: 82px;
-    height: 113px;
+    height: 112px;
     background: #FFFFFF;
-    border: 1px solid #74CB48;
+    border: 1px solid;
     border-radius: 8px;
+    cursor: pointer;
+}
+
+.card:hover {
+    border: 1px dotted gray;
+    background-color: gray;
+    height: 111px;
 }
 
 .card header {
     width: 80px;
-    height: 12px;   
-    font-weight: 400;
-    font-size: 8px;
-    line-height: 12px;
+    height: 12px;
     display: block;
-    color: #74CB48;
     flex: none;
     order: 0;
     flex-grow: 1;
     text-align: right;
     padding: 0px 8px 0px 8px;
+    border-radius: 7px 7px 0 0;
+    background: white;
 }
 
 .card header > h2 {
     font-weight: 400;
     font-size: 8px;
-    line-height: 12px;
-    color: #74CB48;
+    line-height: 6px;
 }
 
 .card > img {
@@ -44,12 +56,12 @@
     align-items: flex-start;
     width: 80px;
     height: 72px;
+    background: white;
 }
 
 .card footer {
     padding: 4px 8px 4px 8px;
     height: 24px;
-    background: #74CB48;
     align-self: stretch;
     border-radius: 0 0 6px 6px;
 }
@@ -62,3 +74,23 @@
     text-align: center;
     color: #FFFFFF;
 }
+
+/* Peguei a relacao de tipos e core daqui: https://gist.github.com/apaleslimghost/0d25ec801ca4fc43317bcff298af43c3 */
+.normal { color: #A8A77A; background-color: #A8A77A; }
+.fire { color: #EE8130; background-color: #EE8130; }
+.water { color: #6390F0; background-color: #6390F0; }
+.electric { color: #F7D02C; background-color: #F7D02C; }
+.grass { color: #7AC74C; background-color: #7AC74C; }
+.ice { color: #96D9D6; background-color: #96D9D6; }
+.fighting { color: #C22E28; background-color: #C22E28; }
+.poison { color: #A33EA1; background-color: #A33EA1; }
+.ground { color: #E2BF65; background-color: #E2BF65; }
+.flying { color: #A98FF3; background-color: #A98FF3; }
+.psychic { color: #F95587; background-color: #F95587; }
+.bug { color: #A6B91A; background-color: #A6B91A; }
+.rock { color: #B6A136; background-color: #B6A136; }
+.ghost { color: #735797; background-color: #735797; }
+.dragon { color: #6F35FC; background-color: #6F35FC; }
+.dark { color: #705746; background-color: #705746; }
+.steel { color: #B7B7CE; background-color: #B7B7CE; }
+.fairy { color: #D685AD; background-color: #D685AD;}
